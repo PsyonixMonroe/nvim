@@ -1,4 +1,4 @@
-require "monroe.options"
-require "monroe.keymap"
 require "monroe.plugins"
-
+require "monroe.keymap"
+require "monroe.options"
+require "monroe.cmp"
