@@ -21,6 +21,9 @@ keymap("n", "<C-j>", "<C-w>j", opts) -- Move down
 keymap("n", "<C-k>", "<C-w>k", opts) -- Move up
 keymap("n", "<C-l>", "<C-w>l", opts) -- Move right
 
+keymap("n", "<C-\\>", ":vsplit<CR>", opts) -- split vertical
+keymap("n", "<C-_>", ":split<CR>", opts) -- split vertical
+
 -- Resize with Arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)
 keymap("n", "<C-Down>", ":resize -2<cr>", opts)

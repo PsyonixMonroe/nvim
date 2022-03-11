@@ -3,7 +3,7 @@ vim.opt.filetype = "on"                         -- make sure we are looking at f
 vim.opt.backspace = "indent,eol,start"          -- set backspacing behavior
 
 vim.opt.backup = false                          -- creates a backup file
-vim.opt.cmdheight = 2                           -- more space in the neovim command line for messages
+vim.opt.cmdheight = 2                           -- more space in the neovim command line for messages 
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true                       -- ignore case in search patterns
@@ -32,8 +32,8 @@ vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Hack 10"                     -- the font used in graphical neovim applications
 
-vim.cmd "colorscheme murphy"                  -- prefered console color scheme
+vim.cmd "colorscheme codemonkey"                  -- prefered console color scheme
 
 vim.cmd("highlight! ErrorMsg guibg=White guifg=Red")                    -- TODO: this doesn't seem to work
-vim.cmd("highlight! CursorLine cterm=underline gui=underline guibg=40") -- TODO: this doesn't seem to work
+-- vim.cmd("highlight! CursorLine gui=underline ") -- TODO: this doesn't seem to work
 
