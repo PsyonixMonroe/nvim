@@ -24,6 +24,11 @@ keymap("n", "<C-l>", "<C-w>l", opts) -- Move right
 keymap("n", "<C-\\>", ":vsplit<CR>", opts) -- split vertical
 keymap("n", "<C-_>", ":split<CR>", opts) -- split vertical
 
+-- tab commands
+keymap("n", "<A-]>", ":tabnext<CR>", opts)
+keymap("n", "<A-[>", ":tabprevious<CR>", opts)
+keymap("n", "<A-o>", ":tabnew<CR>:Lex 30<CR>", opts)
+
 -- Resize with Arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)
 keymap("n", "<C-Down>", ":resize -2<cr>", opts)
