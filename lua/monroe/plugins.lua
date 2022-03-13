@@ -37,4 +37,7 @@ Plug "nvim-telescope/telescope.nvim"
 Plug "nvim-treesitter/nvim-treesitter"
 Plug "p00f/nvim-ts-rainbow"
 
+-- Autopairs --
+Plug "windwp/nvim-autopairs"
+
 vim.call('plug#end')
