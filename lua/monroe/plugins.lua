@@ -33,5 +33,8 @@ Plug 'williamboman/nvim-lsp-installer'
 -- Telescope --
 Plug "nvim-telescope/telescope.nvim"
 
+-- Treesitter --
+Plug "nvim-treesitter/nvim-treesitter"
+Plug "p00f/nvim-ts-rainbow"
 
 vim.call('plug#end')
