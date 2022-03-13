@@ -64,3 +64,8 @@ keymap("v", "<C-c>", '"+y', opts)           -- Copy
 keymap("v", "<C-v>", '"_d"+gP', opts)       -- Paste (delete selected and paste from clipboard)
 keymap("n", "<C-v>", '"+gP', opts)          -- Paste (as an insert)
 keymap("i", "<C-v>", '<ESC>"+gPa', opts)    -- Paste (as an insert from insert mode)
+
+--- Plugin Binds ---
+-- Telescope --
+keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
+
