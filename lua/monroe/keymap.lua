@@ -32,7 +32,7 @@ keymap("n", "<A-o>", ":tabnew<CR>:Lex 30<CR>", opts)
 -- Resize with Arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)
 keymap("n", "<C-Down>", ":resize -2<cr>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<cr>", opts)    -- unfortunately 
+keymap("n", "<C-Left>", ":vertical resize +2<cr>", opts)    -- unfortunately
 keymap("n", "<C-Right>", ":vertical resize -2<cr>", opts)
 
 -- Move Text Up or Down
