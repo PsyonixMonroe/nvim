@@ -65,6 +65,19 @@ keymap("v", "<C-v>", '"_d"+gP', opts)       -- Paste (delete selected and paste 
 keymap("n", "<C-v>", '"+gP', opts)          -- Paste (as an insert)
 keymap("i", "<C-v>", '<ESC>"+gPa', opts)    -- Paste (as an insert from insert mode)
 
+--- Buffers ---
+keymap("n", "<leader>b", ":buffers<CR>", opts)
+keymap("n", "<leader>1", ":b1<CR>", opts)
+keymap("n", "<leader>2", ":b2<CR>", opts)
+keymap("n", "<leader>3", ":b3<CR>", opts)
+keymap("n", "<leader>4", ":b4<CR>", opts)
+keymap("n", "<leader>5", ":b5<CR>", opts)
+keymap("n", "<leader>6", ":b6<CR>", opts)
+keymap("n", "<leader>7", ":b7<CR>", opts)
+keymap("n", "<leader>8", ":b8<CR>", opts)
+keymap("n", "<leader>9", ":b9<CR>", opts)
+keymap("n", "<leader>0", ":b10<CR>", opts)
+
 --- Plugin Binds ---
 -- Telescope --
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
