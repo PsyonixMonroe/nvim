@@ -3,10 +3,13 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- standard plugins --
--- Plug 'mhinz/vim-signify'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+
+-- Tree Explorer
+Plug "kyazdani42/nvim-web-devicons"
+Plug "kyazdani42/nvim-tree.lua"
 
 -- useful as libraries --
 Plug 'nvim-lua/popup.nvim'
