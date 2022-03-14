@@ -6,6 +6,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'akinsho/toggleterm.nvim'
 
 -- Tree Explorer
 Plug 'kyazdani42/nvim-web-devicons'

@@ -8,4 +8,5 @@ require "monroe.autopairs"
 require "monroe.gitsigns"
 require "monroe.nvimtree"
 require "monroe.bufferline"
+require "monroe.toggleterm"
 
