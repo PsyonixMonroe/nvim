@@ -33,6 +33,7 @@ Plug 'rafamadriz/friendly-snippets'
 -- LSP --
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'jose-elias-alvarez/null-ls.nvim' -- for formatting and linting
 
 -- Telescope --
 Plug 'nvim-telescope/telescope.nvim'
@@ -47,5 +48,6 @@ Plug 'windwp/nvim-autopairs'
 -- Buffers
 Plug 'akinsho/bufferline.nvim'
 Plug 'moll/vim-bbye'
+
 
 vim.call('plug#end')

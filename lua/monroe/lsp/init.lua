@@ -5,3 +5,4 @@ end
 
 require ("monroe.lsp.lsp-installer")
 require ("monroe.lsp.handlers").setup()
+require ("monroe.lsp.null-ls")
