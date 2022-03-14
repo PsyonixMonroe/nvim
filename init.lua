@@ -5,4 +5,5 @@ require "monroe.cmp"
 require "monroe.lsp"
 require "monroe.treesitter"
 require "monroe.autopairs"
+require "monroe.gitsigns"
 

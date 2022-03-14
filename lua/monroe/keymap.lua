@@ -66,8 +66,8 @@ keymap("n", "<C-v>", '"+gP', opts)          -- Paste (as an insert)
 keymap("i", "<C-v>", '<ESC>"+gPa', opts)    -- Paste (as an insert from insert mode)
 
 --- Buffers ---
-keymap("n", "<leader>b", ":buffers<CR>", opts)
-keymap("n", "<leader>1", ":b1<CR>", opts)
+keymap("n", "<leader>b", ":buffers<CR>", opts)			-- List Buffers
+keymap("n", "<leader>1", ":b1<CR>", opts)				-- Jump to buffer #
 keymap("n", "<leader>2", ":b2<CR>", opts)
 keymap("n", "<leader>3", ":b3<CR>", opts)
 keymap("n", "<leader>4", ":b4<CR>", opts)
@@ -77,6 +77,15 @@ keymap("n", "<leader>7", ":b7<CR>", opts)
 keymap("n", "<leader>8", ":b8<CR>", opts)
 keymap("n", "<leader>9", ":b9<CR>", opts)
 keymap("n", "<leader>0", ":b10<CR>", opts)
+keymap("n", "<leader>c", ":bd<CR>", opts) 				-- Close Buffer
+
+--- Git Commands ---
+keymap("n", "<leader>ga", ":Gitsigns stage_hunk<CR>", opts)
+keymap("n", "<leader>gu", ":Gitsigns undo_stage_hunk<CR>", opts)
+keymap("n", "<leader>g[", ":Gitsigns prev_hunk<CR>", opts)
+keymap("n", "<leader>g]", ":Gitsigns next_hunk<CR>", opts)
+keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
 
 --- Plugin Binds ---
 -- Telescope --
