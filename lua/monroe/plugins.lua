@@ -8,8 +8,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 -- Tree Explorer
-Plug "kyazdani42/nvim-web-devicons"
-Plug "kyazdani42/nvim-tree.lua"
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 -- useful as libraries --
 Plug 'nvim-lua/popup.nvim'
@@ -35,13 +35,17 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
 -- Telescope --
-Plug "nvim-telescope/telescope.nvim"
+Plug 'nvim-telescope/telescope.nvim'
 
 -- Treesitter --
-Plug "nvim-treesitter/nvim-treesitter"
-Plug "p00f/nvim-ts-rainbow"
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'p00f/nvim-ts-rainbow'
 
 -- Autopairs --
-Plug "windwp/nvim-autopairs"
+Plug 'windwp/nvim-autopairs'
+
+-- Buffers
+Plug 'akinsho/bufferline.nvim'
+Plug 'moll/vim-bbye'
 
 vim.call('plug#end')

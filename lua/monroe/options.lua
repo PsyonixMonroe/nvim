@@ -2,6 +2,7 @@ vim.opt.syntax = "on"                           -- turn on syntax highlighting
 vim.opt.filetype = "on"                         -- make sure we are looking at file types for syntax highlighting
 vim.opt.backspace = "indent,eol,start"          -- set backspacing behavior
 
+
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.cmdheight = 2                           -- more space in the neovim command line for messages
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
