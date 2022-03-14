@@ -34,6 +34,9 @@ vim.opt.guifont = "Hack 10"                     -- the font used in graphical ne
 
 vim.cmd "colorscheme codemonkey"                  -- prefered console color scheme
 
+-- Open buffers as tabs
+-- vim.cmd(":au BuffAdd,BufNewFile,BufRead * nested tab sball")
+
 -- vim.cmd("highlight! ErrorMsg guibg=White guifg=Red")                    -- TODO: this doesn't seem to work
 -- vim.cmd("highlight! CursorLine gui=underline ") -- TODO: this doesn't seem to work
 --

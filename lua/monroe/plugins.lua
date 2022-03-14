@@ -3,7 +3,8 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- standard plugins --
-Plug 'mhinz/vim-signify'
+-- Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
@@ -14,7 +15,7 @@ Plug 'nvim-lua/plenary.nvim'
 -- colorscheme --
 Plug 'lunarvim/colorschemes'
 
--- CMP -- 
+-- CMP --
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
