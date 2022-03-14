@@ -7,4 +7,5 @@ require "monroe.treesitter"
 require "monroe.autopairs"
 require "monroe.gitsigns"
 require "monroe.nvimtree"
+require "monroe.bufferline"
 

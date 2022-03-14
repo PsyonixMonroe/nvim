@@ -11,6 +11,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
+
 --- Normal Mode ---
 -- fix yank line
 keymap("n", "Y", "yy", opts)
@@ -24,10 +25,13 @@ keymap("n", "<C-l>", "<C-w>l", opts) -- Move right
 keymap("n", "<C-\\>", ":vsplit<CR>", opts) -- split vertical
 keymap("n", "<C-_>", ":split<CR>", opts) -- split vertical
 
--- tab commands
-keymap("n", "<A-]>", ":tabnext<CR>", opts)
-keymap("n", "<A-[>", ":tabprevious<CR>", opts)
-keymap("n", "<A-o>", ":tabnew<CR>:Lex 30<CR>", opts)
+-- tab/buffer commands
+keymap("n", "<A-]>", ":bnext<CR>", opts)
+keymap("n", "<A-[>", ":bprevious<CR>", opts)
+keymap("n", "<A-o>", ":enew<CR>:NvimTreeToggle<CR>", opts)
+keymap("n", "<A-q>", ":Bdelete<CR>", opts)
+
+keymap("n", "<A-s>", ":w<CR>", opts)
 
 -- Resize with Arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)
