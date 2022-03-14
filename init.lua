@@ -6,4 +6,5 @@ require "monroe.lsp"
 require "monroe.treesitter"
 require "monroe.autopairs"
 require "monroe.gitsigns"
+require "monroe.nvimtree"
 
