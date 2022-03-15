@@ -2,7 +2,6 @@ vim.opt.syntax = "on"                           -- turn on syntax highlighting
 vim.opt.filetype = "on"                         -- make sure we are looking at file types for syntax highlighting
 vim.opt.backspace = "indent,eol,start"          -- set backspacing behavior
 
-
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.cmdheight = 2                           -- more space in the neovim command line for messages
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
@@ -32,6 +31,17 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Hack 10"                     -- the font used in graphical neovim applications
+
+vim.opt.autowrite = true
+vim.opt.autowriteall = true
+vim.cmd([[ 
+    autocmd FocusLost,BufLeave,BufWinLeave * 
+    \   if &readonly || &buftype == 'nofile'
+    \|   echo "readonly"
+    \|  else
+    \|   :w!
+    \|  endif
+    ]])
 
 vim.cmd "colorscheme codemonkey"                  -- prefered console color scheme
 
