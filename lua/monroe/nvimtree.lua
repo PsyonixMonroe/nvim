@@ -64,6 +64,9 @@ nvim_tree.setup {
     update_cwd = true,
     ignore_list = {},
   },
+  filters = {
+    custom = { ".git", "site/autoload" }
+  },
   git = {
     enable = true,
     ignore = true,
