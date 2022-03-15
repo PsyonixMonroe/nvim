@@ -36,12 +36,14 @@ vim.opt.autowrite = true
 vim.opt.autowriteall = true
 vim.cmd([[ 
     autocmd FocusLost,BufLeave,BufWinLeave * 
-    \   if &readonly || &buftype == 'nofile'
-    \|   echo "readonly"
+    \   if &readonly || &buftype == "nofile" || &buftype == "terminal"
+    \|   echo "readonly - " 
     \|  else
     \|   :w!
     \|  endif
     ]])
+    -- this can be used after the else to inspect buftypes to add them to the list that is skipped
+    -- \|   echo "buftype: " .. &buftype
 
 vim.cmd "colorscheme codemonkey"                  -- prefered console color scheme
 
