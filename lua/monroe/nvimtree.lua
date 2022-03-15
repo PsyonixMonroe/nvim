@@ -65,7 +65,7 @@ nvim_tree.setup {
     ignore_list = {},
   },
   filters = {
-    custom = { ".git", "site/autoload" }
+    custom = { ".git", "site/autoload", ".zcompdump*" }
   },
   git = {
     enable = true,
