@@ -1,6 +1,16 @@
 "" Source your .vimrc
 " source L:\\user\\matt\\.config\\nvim\\ideavim.vim
 
+" Full list of Actions: https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+
+" setup Leader Key
+noremap <Space> <Nop>
+let mapleader = " "
+let maplocalleader = " "
+
+" fix yank line
+nnoremap Y yy
+
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 nnoremap <leader>r :action ReformatCode<CR>
 nnoremap <leader>f :action GotoFile<CR>
@@ -12,6 +22,38 @@ nnoremap <leader>o :action GotoSuperMethod<CR>
 nnoremap <leader>p :action ParameterInfo<CR>
 inoremap <A-p> <C-o>:action ParameterInfo<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader><leader> :action ShowPopupMenu<CR>
+nnoremap gl :action ShowErrorDescription<CR>
+
+" This will activate but not deactivate
+" nnoremap <A-.> :action ActivateTerminalToolWindow<CR>
+" nnoremap <A-q> :action CloseActiveTab<CR>
+
+" ----- TERMINAL SETUP -----
+
+" Instead, For Terminal binds go to keymap and set
+" ToolWindow > Terminal = <A-.>
+" Then Remove `Escape` from Plugins > Terminal > Switch Focus to Editor"
+
+" ----- MENU SETUP -----
+" to get hjkl to work in menus
+" Keymap > Editor Actions >
+"   Down    Add Alt+Shift+j
+"   Up      Add Alt+Shift+k
+"   Left    Add Alt+Shift+h
+"   Right   Add Alt+Shift+l
+
+" Nerd Tree
+nnoremap <leader>e :NERDTree<CR>
+" <ENTER>   open file in main window
+" i         open file in split
+" s         open file in vsplit
+" P         go to root of project
+" p         go to current dir root
+" q         close window
+" x         close parent node
+" /         search directories
+" m         display menu
 
 " Git actions
 " TODO: currently support for hunks doesn't seem to be in place for IdeaVim
@@ -22,24 +64,16 @@ nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 " nnoremap <leader>gp :action <CR>
 " nnoremap <leader>gb :action <CR>
 
-" Find more examples here: https://jb.gg/share-ideavimrc
-
-" setup Leader Key
-noremap <Space> <Nop>
-let mapleader = " "
-let maplocalleader = " "
-
-"- Normal Mode "-
-" fix yank line
-nnoremap Y yy
-
 nnoremap <A-\> :action SplitVertically<CR>:action MoveEditorToOppositeTabGroup<CR>
 nnoremap <A-_> :action SplitHorizontally<CR>:action MoveEditorToOppositeTabGroup<CR>
 nnoremap <A-=> :action Unsplit<CR>
-nnoremap <A-]> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <C-]> :action MoveEditorToOppositeTabGroup<CR>
 
-nnoremap <TAB> :action PreviousTab<CR>
-nnoremap <s-TAB> :action NextTab<CR>
+nnoremap <A-]> :action NextTab<CR>
+nnoremap <A-[> :action PreviousTab<CR>
+
+" nnoremap <TAB> :action PreviousTab<CR>
+" nnoremap <s-TAB> :action NextTab<CR>
 
 " window navigation between splits
 " Move to Left
@@ -93,5 +127,7 @@ let sidescrolloff=8
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 " Plug 'junegunn/fzf'
 
+" Find more examples here: https://jb.gg/share-ideavimrc
