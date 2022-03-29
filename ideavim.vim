@@ -24,6 +24,13 @@ inoremap <A-p> <C-o>:action ParameterInfo<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader><leader> :action ShowPopupMenu<CR>
 nnoremap gl :action ShowErrorDescription<CR>
+nnoremap gi :action Generate<CR>
+
+nnoremap <leader>dr :action RunClass<CR>
+
+nnoremap zz :action ExpandRegion<CR>
+nnoremap zc :action CollapseRegion<CR>
+
 
 " This will activate but not deactivate
 " nnoremap <A-.> :action ActivateTerminalToolWindow<CR>
@@ -77,13 +84,14 @@ nnoremap <A-[> :action PreviousTab<CR>
 
 " window navigation between splits
 " Move to Left
-nnoremap <A-h> <C-w>h
+nnoremap <A-h> :action NextSplitter<CR>
 " Move down
 nnoremap <A-j> <C-w>j
 " Move up
 nnoremap <A-k> <C-w>k
 " Move right
-nnoremap <A-l> <C-w>l
+" nnoremap <A-l> <C-w>l
+nnoremap <A-l> :action NextSplitter<CR>
 
 " Resize with Arrows
 nnoremap <C-Up> :resize +2<CR>
@@ -131,3 +139,6 @@ Plug 'preservim/nerdtree'
 " Plug 'junegunn/fzf'
 
 " Find more examples here: https://jb.gg/share-ideavimrc
+
+
+
