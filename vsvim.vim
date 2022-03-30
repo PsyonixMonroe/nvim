@@ -108,14 +108,10 @@ xnoremap <C-k> :move '>-2<CR>gv-gv
 
 set backspace=indent,eol,start
 
-set fileencoding=utf-8
 set hlsearch=true
 set ignorecase=true
 let pumheight=10
 set smartcase=true
-set smartindent=true
-set splitbelow=true
-set splitright=true
 let updatetime=100
 set relativenumber=false
 let scrolloff=8
