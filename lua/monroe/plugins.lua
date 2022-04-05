@@ -34,6 +34,7 @@ Plug 'rafamadriz/friendly-snippets'
 -- LSP --
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'pierreglaser/folding-nvim'
 
 -- Telescope --
 Plug 'nvim-telescope/telescope.nvim'
