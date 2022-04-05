@@ -28,8 +28,8 @@ toggleterm.setup({
 
 function _G.set_terminal_keymaps()
   local opts = {noremap = true}
-  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<A-.><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<A-.><C-n>]], opts)
+  --vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<A-.><C-n>]], opts)
+  --vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<A-.><C-n>]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<A-.><C-n><C-W>h]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<A-.><C-n><C-W>j]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<A-.><C-n><C-W>k]], opts)
