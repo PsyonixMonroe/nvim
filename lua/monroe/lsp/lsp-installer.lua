@@ -19,7 +19,6 @@ lsp_installer.on_server_ready(function(server)
     if server.name == "sumneko_lua" then
         local sumneko_opts = require("monroe.lsp.settings.sumneko_lua")
         opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-        vim.opt.shiftwidth = 2
     end
 
     -- This setup() function is exactly the same as lspconfig's setup function.
