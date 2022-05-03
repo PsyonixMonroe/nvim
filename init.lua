@@ -9,6 +9,7 @@ require "monroe.gitsigns"
 require "monroe.nvimtree"
 require "monroe.bufferline"
 require "monroe.toggleterm"
+-- require "monroe.conflict"
 
 
 

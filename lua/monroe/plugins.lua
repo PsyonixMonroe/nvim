@@ -4,6 +4,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- standard plugins --
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'akinsho/git-conflict.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'akinsho/toggleterm.nvim'
