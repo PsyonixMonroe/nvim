@@ -12,3 +12,8 @@ require "monroe.toggleterm"
 require "monroe.conflict"
 require "monroe.clipboard"
 
+-- to update
+-- > PlugUpdate
+-- > Update all lsp
+-- > TSUpdate
+-- fix other issues
