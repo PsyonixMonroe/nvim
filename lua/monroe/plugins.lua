@@ -37,6 +37,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'pierreglaser/folding-nvim'
 
+-- Other Languages --
+Plug 'towolf/vim-helm'
+
 -- Telescope --
 Plug 'nvim-telescope/telescope.nvim'
 
