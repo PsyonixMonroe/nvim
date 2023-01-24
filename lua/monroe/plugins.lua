@@ -54,4 +54,8 @@ Plug 'windwp/nvim-autopairs'
 Plug 'akinsho/bufferline.nvim'
 Plug 'moll/vim-bbye'
 
+-- Github
+Plug 'ldelossa/gh.nvim'
+Plug 'ldelossa/litee.nvim'
+
 vim.call('plug#end')
