@@ -11,6 +11,7 @@ require "monroe.bufferline"
 require "monroe.toggleterm"
 require "monroe.conflict"
 require "monroe.clipboard"
+require "monroe.github"
 
 -- to update
 -- > PlugUpdate
