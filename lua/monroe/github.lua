@@ -3,7 +3,11 @@ if not lib_status then
   return
 end
 
-lib_config.setup()
+lib_config.setup({
+  -- tree = {
+	-- icon_set = "codicons"
+  -- },
+})
 
 local gh_status, gh_config = pcall(require, "litee.gh")
 if not gh_status then
