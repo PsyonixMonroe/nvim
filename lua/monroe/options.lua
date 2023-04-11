@@ -38,7 +38,7 @@ vim.g.markdown_fenced_languages = { 'html', 'python', 'vim', 'sql', 'mysql', 'ph
 vim.opt.autowrite = true
 vim.opt.autowriteall = true
 vim.cmd([[ 
-    autocmd FocusLost,BufLeave,BufWinLeave * 
+    autocmd FocusLost,BufWinLeave * 
     \   if &readonly || &buftype == "nofile" || &buftype == "terminal" || &buftype == "prompt"
     \|   echo "readonly - " 
     \|  else
