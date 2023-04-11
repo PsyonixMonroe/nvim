@@ -6,8 +6,6 @@ keybinds between neovim, jetbrains and visual studio ides should be very similar
 # Instructions
 clone into `~/.config/nvim`
 
-open neovim, you will get an error, clear it and exit.
-
 run command `cp -r ~/.config/nvim/site ~/.local/share/nvim/`
 
 open neovim and `:PlugInstall`
