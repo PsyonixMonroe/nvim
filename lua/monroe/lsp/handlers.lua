@@ -64,6 +64,7 @@ local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "go", "<C-o>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>t", ":tab sb #<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>y", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gl", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)

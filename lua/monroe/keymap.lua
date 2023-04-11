@@ -24,6 +24,7 @@ keymap("n", "<A-l>", "<C-w>l", opts) -- Move right
 
 keymap("n", "<A-\\>", ":vsplit<CR>", opts) -- split vertical
 keymap("n", "<A-_>", ":split<CR>", opts) -- split vertical
+keymap("n", "<A-e>", "<C-w>q", opts) -- close split
 
 -- tab/buffer commands
 keymap("n", "<A-]>", ":bnext<CR>", opts)
