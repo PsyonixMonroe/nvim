@@ -41,7 +41,6 @@ vim.opt.autowriteall = true
 vim.cmd([[ 
     autocmd FocusLost,BufWinLeave * 
     \   if &readonly || &buftype == "nofile" || &buftype == "terminal" || &buftype == "prompt"
-    \|   echo "readonly - " 
     \|  else
     \|   :w!
     \|  endif
