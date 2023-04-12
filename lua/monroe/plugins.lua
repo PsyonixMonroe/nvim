@@ -33,8 +33,10 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 -- LSP --
+Plug 'VonHeikemen/lsp-zero.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+Plug('williamboman/mason.nvim', { ['do'] = ':MasonUpdate' })
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'pierreglaser/folding-nvim'
 
 -- Other Languages --
