@@ -34,6 +34,7 @@ vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Hack 10"                     -- the font used in graphical neovim applications
 
 vim.g.markdown_fenced_languages = { 'html', 'python', 'vim', 'sql', 'mysql', 'php', 'go', 'bash', 'csharp', 'c', 'c++' }
+vim.g.goimports_simplify = 1
 
 vim.opt.autowrite = true
 vim.opt.autowriteall = true

@@ -60,4 +60,7 @@ Plug 'moll/vim-bbye'
 Plug 'ldelossa/gh.nvim'
 Plug 'ldelossa/litee.nvim'
 
+-- Go Lang Plugins 
+Plug 'mattn/vim-goimports'
+
 vim.call('plug#end')
