@@ -153,4 +153,8 @@ lspzero.nvim_workspace()
 
 lspzero.setup()
 
+require("mason").setup({
+  PATH = "prepend"
+})
+
 setup()

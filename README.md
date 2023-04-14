@@ -8,11 +8,11 @@ clone into `~/.config/nvim`
 
 run command `cp -r ~/.config/nvim/site ~/.local/share/nvim/`
 
-open neovim and `:PlugInstall`
+open neovim and `:PlugInstall` and `:MasonUpdate`
 
 run `:checkhealth` - correct any issues with the system (language installs that are not available or the correct version).
 
-close and reopen then `:LspInstallInfo`, install the language servers that you would like. This might require other components to be installed on the system.
+close and reopen then `:Mason`, install the language servers that you would like. This might require other components to be installed on the system.
 
 ## IntellIJ IDEA 
 open IDEA and install the jetbrains vim plugin.
