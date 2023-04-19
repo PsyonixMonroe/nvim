@@ -126,7 +126,7 @@ local function on_attach(client, bufnr)
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
-  require('folding').on_attach()
+  -- require('folding').on_attach()
   vim.opt.foldlevel=20
 end
 
