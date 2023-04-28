@@ -34,7 +34,6 @@ vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Hack 10"                     -- the font used in graphical neovim applications
 
 vim.g.markdown_fenced_languages = { 'html', 'python', 'vim', 'sql', 'mysql', 'php', 'go', 'bash', 'csharp', 'c', 'c++' }
-vim.g.goimports_simplify = 1
 
 vim.opt.autowrite = true
 vim.opt.autowriteall = true
@@ -55,4 +54,16 @@ vim.cmd "colorscheme codemonkey"                  -- prefered console color sche
 
 -- vim.cmd("highlight! ErrorMsg guibg=White guifg=Red")                    -- TODO: this doesn't seem to work
 -- vim.cmd("highlight! CursorLine gui=underline ") -- TODO: this doesn't seem to work
---
+
+-- Vim-Go Settings --
+vim.g.goimports_simplify = 1
+vim.g.go_debug_log_output = 'debugger'
+vim.g.go_debug_preserve_layout = 1
+
+vim.g.goimports_simplify = 1
+-- let g:go_debug_windows = {
+--           \ 'vars':       'leftabove 30vnew',
+--           \ 'stack':      'leftabove 20new',
+--           \ 'goroutines': 'botright 10new',
+--           \ 'out':        'botright 5new',
+-- \ }

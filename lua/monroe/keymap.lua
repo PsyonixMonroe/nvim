@@ -96,3 +96,20 @@ keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
 -- Telescope --
 keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 
+--- Go Keybinds ---
+keymap("n", "<leader>dd", ":GoDebugBreakpoint<CR>", opts)
+keymap("n", "<leader>de", ":GoDebugPrint ", opts)
+keymap("n", "<leader>dq", ":GoDebugStop<CR>", opts)
+keymap("n", "<leader>dr", ":GoDebugStart<CR>", opts)
+keymap("n", "<F7>", ":GoDebugStep<CR>", opts)
+keymap("n", "<F8>", ":GoDebugNext<CR>", opts)
+
+vim.g.go_debug_mappings = {
+  ['(go-debug-into)'] = { key = '<F7>' },
+  ['(go-debug-next)'] = { key = '<F8>' },
+  ['(go-debug-continue)'] = { key = '<F9>' },
+  ['(go-debug-halt)'] = { key = '<F12>' },
+  ['(go-debug-breakpoint)'] = { key = '<F4>' },
+
+}
+
