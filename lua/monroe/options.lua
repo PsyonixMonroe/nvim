@@ -33,7 +33,7 @@ vim.opt.binary = true                           -- don't automatically add new l
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "Hack 10"                     -- the font used in graphical neovim applications
 
-vim.g.markdown_fenced_languages = { 'html', 'python', 'vim', 'sql', 'mysql', 'php', 'go', 'bash', 'csharp', 'c', 'c++' }
+vim.g.markdown_fenced_languages = { 'html', 'python', 'vim', 'sql', 'mysql', 'php', 'go', 'godoc', 'bash', 'cs', 'c', 'cpp', 'cmake', 'valgrind', 'rust', 'git', 'sql', 'mysql', 'zig', 'config', 'confini', 'gdb', 'java', 'javacc', 'javascript', 'json', 'make', 'nginx', 'nix', 'sed', 'sh', 'sshconfig', 'sshdconfig', 'systemd', 'tar', 'tmux', 'typescript', 'wget', 'yaml', 'zsh' }
 
 vim.opt.autowrite = true
 vim.opt.autowriteall = true
@@ -48,6 +48,8 @@ vim.cmd([[
     -- \|   echo "buftype: " .. &buftype
 
 vim.cmd "colorscheme codemonkey"                  -- prefered console color scheme
+
+vim.cmd([[ autocmd BufEnter *.md :setlocal filetype=markdown ]])
 
 -- Open buffers as tabs
 -- vim.cmd(":au BuffAdd,BufNewFile,BufRead * nested tab sball")
