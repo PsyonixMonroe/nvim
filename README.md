@@ -14,6 +14,8 @@ run `:checkhealth` - correct any issues with the system (language installs that 
 
 close and reopen then `:Mason`, install the language servers that you would like. This might require other components to be installed on the system.
 
+Be sure you are using a NerdFont version of (Hack)[https://www.nerdfonts.com/font-downloads]
+
 ## IntellIJ IDEA 
 open IDEA and install the jetbrains vim plugin.
 
