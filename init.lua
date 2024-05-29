@@ -12,9 +12,11 @@ require "monroe.toggleterm"
 require "monroe.conflict"
 require "monroe.clipboard"
 require "monroe.github"
+require "monroe.macros"
 
 -- to update
 -- > PlugUpdate
 -- > Update all lsp
 -- > TSUpdate
 -- fix other issues
+
