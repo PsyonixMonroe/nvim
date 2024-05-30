@@ -2,7 +2,7 @@ local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
 
--- create short name for the function
+-- CReate short name for the function
 local keymap = vim.api.nvim_set_keymap
 
 -- setup Leader Key
@@ -26,6 +26,14 @@ keymap("n", "<A-\\>", ":vsplit<CR>", opts) -- split vertical
 keymap("n", "<A-_>", ":split<CR>", opts) -- split vertical
 keymap("n", "<A-e>", "<C-w>q", opts) -- close split
 
+-- jump up and down half page with cursor in middle
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+
+-- keep search in the middle 
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
 -- tab/buffer commands
 keymap("n", "<A-]>", ":bnext<CR>", opts)
 keymap("n", "<A-[>", ":bprevious<CR>", opts)
@@ -35,17 +43,28 @@ keymap("n", "<A-q>", ":Bdelete<CR>", opts)
 keymap("n", "<A-s>", ":w<CR>", opts)
 
 -- Resize with Arrows
-keymap("n", "<C-Up>", ":resize +2<cr>", opts)
-keymap("n", "<C-Down>", ":resize -2<cr>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<cr>", opts)    -- unfortunately
-keymap("n", "<C-Right>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)    -- unfortunately
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Move Text Up or Down
-keymap("n", "<C-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<C-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<C-j>", "<Esc>:m .+1<CR>==gi", opts)
 
 -- open left explorer
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+
+keymap("n", "J", "mzJ`z", opts) -- append line to end
+
+keymap("n", "<C-k>", "<cmd>cnext<CR>zz", opts)
+keymap("n", "<C-j>", "<cmd>cprev<CR>zz", opts)
+keymap("n", "<leader>k", "<cmd>lnext<CR>zz", opts)
+keymap("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
+
+keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", term_opts)
 
 --- Visual Mode ---
 -- stay in indent mode
@@ -53,22 +72,30 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- move text block up or down
-keymap("v", "<C-j>", ":m .+1<CR>==", opts)
-keymap("v", "<C-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "p", '\"_dP', opts)
 
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "p", '\"_dP', opts)
 
 --- Insert Mode ---
 -- better cut, copy, paste
+keymap("x", "<C-x>", '"+x', opts)           -- Cut
+keymap("x", "<C-c>", '"+y', opts)           -- Copy
+keymap("x", "<C-v>", '"_d"+gP', opts)       -- Paste (delete selected and paste from clipboard)
 keymap("v", "<C-x>", '"+x', opts)           -- Cut
 keymap("v", "<C-c>", '"+y', opts)           -- Copy
 keymap("v", "<C-v>", '"_d"+gP', opts)       -- Paste (delete selected and paste from clipboard)
 keymap("n", "<C-v>", '"+gP', opts)          -- Paste (as an insert)
 keymap("i", "<C-v>", '<ESC>"+gPa', opts)    -- Paste (as an insert from insert mode)
+keymap("n", "<leader>y", '\"+y', opts)		-- yank to system clipboard
+keymap("v", "<leader>y", '\"+y', opts)		-- yank to system clipboard
+keymap("x", "<leader>y", '\"+y', opts)		-- yank to system clipboard
+keymap("n", "<leader>p", '\"+gP', opts)		-- yank to system clipboard
+keymap("v", "<leader>p", '\"+gP', opts)		-- yank to system clipboard
+keymap("x", "<leader>p", '\"+gP', opts)		-- yank to system clipboard
 
 --- Buffers ---
 keymap("n", "<leader>b", ":buffers<CR>", opts)			-- List Buffers
@@ -94,7 +121,11 @@ keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
 
 --- Plugin Binds ---
 -- Telescope --
-keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fa", "<cmd>Telescope find_files<CR>", opts)
+keymap('n', '<leader>ff', "<cmd>Telescope git_files<CR>", opts)
+vim.keymap.set('n', '<leader>fs', function()
+	require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
+end)
 
 --- Go Keybinds ---
 keymap("n", "<leader>dd", ":GoDebugBreakpoint<CR>", opts)
