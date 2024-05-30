@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = "all",
+    ensure_installed = { "help", "javascript", "typescript", "html", "c", "cpp", "lua", "rust", "yaml", "go", "gomod", "gosum", "bash", "c_sharp", "cmake", "css", "dockerfile", "git_config", "gitignore", "git_rebase", "html", "ini", "java", "json", "make", "markdown", "nix", "php", "python", "rust", "terraform", "vim", "zig"},
     sync_install = false,
     ignore_install = { "phpdoc" },
     autopairs = {
