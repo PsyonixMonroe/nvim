@@ -55,7 +55,10 @@ vim.cmd "colorscheme codemonkey"                  				-- prefered console color 
 vim.cmd([[ autocmd BufEnter *.md :setlocal filetype=markdown ]])
 vim.cmd([[ autocmd BufEnter *Jenkinsfile* :setlocal filetype=groovy ]])
 vim.cmd([[ autocmd BufEnter *.lua :setlocal filetype=lua ]])
-vim.cmd([[ autocmd BufEnter * :%s/\r//ge ]])
+vim.cmd([[ autocmd BufEnter *
+	\  if !&readonly && !&modifiable && !&buftype == "nofile" && !&buftype == "terminal" && !&buftype == "prompt"
+	\|   :%s/\r//ge
+	\| endif ]])
 
 -- Open buffers as tabs
 -- vim.cmd(":au BuffAdd,BufNewFile,BufRead * nested tab sball")
