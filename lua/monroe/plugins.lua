@@ -41,7 +41,6 @@ Plug 'pierreglaser/folding-nvim'
 
 -- Other Languages --
 Plug 'towolf/vim-helm'
-Plug 'fatih/vim-go'
 
 -- Telescope --
 Plug 'nvim-telescope/telescope.nvim'
@@ -63,5 +62,6 @@ Plug 'ldelossa/litee.nvim'
 
 -- Go Lang Plugins 
 Plug 'mattn/vim-goimports'
+Plug 'fatih/vim-go'
 
 vim.call('plug#end')
