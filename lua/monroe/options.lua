@@ -50,7 +50,9 @@ vim.cmd([[
     -- this can be used after the else to inspect buftypes to add them to the list that is skipped
     -- \|   echo "buftype: " .. &buftype
 
-vim.cmd "colorscheme codemonkey"                  				-- prefered console color scheme
+vim.cmd.colorscheme("codemonkey")                  				-- prefered console color scheme
+vim.cmd([[ autocmd BufEnter * colorscheme codemonkey ]])
+vim.cmd([[ autocmd BufEnter *.zig colorscheme gruber-darker ]])
 
 vim.cmd([[ autocmd BufEnter *.md :setlocal filetype=markdown ]])
 vim.cmd([[ autocmd BufEnter *Jenkinsfile* :setlocal filetype=groovy ]])

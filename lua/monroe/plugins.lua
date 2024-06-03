@@ -19,6 +19,7 @@ Plug 'nvim-lua/plenary.nvim'
 
 -- colorscheme --
 Plug 'lunarvim/colorschemes'
+Plug 'blazkowolf/gruber-darker.nvim'
 
 -- CMP --
 Plug 'hrsh7th/nvim-cmp'
