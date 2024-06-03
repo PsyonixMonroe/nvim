@@ -9,7 +9,9 @@ end
 
 nvim_tree.setup {
   on_attach = on_attach,
-
+  
+  prefer_startup_root = true,
+  
   renderer = { 
 	icons = { 
 	  glyphs = {
@@ -60,7 +62,7 @@ nvim_tree.setup {
     },
   },
   update_focused_file = {
-    enable = true,
+    enable = false,
     update_cwd = true,
     ignore_list = {},
   },
