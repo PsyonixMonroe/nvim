@@ -12,6 +12,7 @@ require "monroe.toggleterm"
 require "monroe.clipboard"
 require "monroe.github"
 require "monroe.macros"
+require "monroe.terraform"
 
 -- to update
 -- > PlugUpdate

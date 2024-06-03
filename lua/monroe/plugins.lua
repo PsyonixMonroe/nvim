@@ -41,6 +41,7 @@ Plug 'pierreglaser/folding-nvim'
 
 -- Other Languages --
 Plug 'towolf/vim-helm'
+Plug 'hashivim/vim-terraform'
 
 -- Telescope --
 Plug 'nvim-telescope/telescope.nvim'
