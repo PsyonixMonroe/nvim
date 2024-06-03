@@ -23,7 +23,7 @@ keymap("n", "<A-k>", "<C-w>k", opts) -- Move up
 keymap("n", "<A-l>", "<C-w>l", opts) -- Move right
 
 keymap("n", "<A-\\>", ":vsplit<CR>", opts) -- split vertical
-keymap("n", "<A-_>", ":split<CR>", opts) -- split vertical
+keymap("n", "<A-->", ":split<CR>", opts) -- split vertical
 keymap("n", "<A-e>", "<C-w>q", opts) -- close split
 
 -- jump up and down half page with cursor in middle
