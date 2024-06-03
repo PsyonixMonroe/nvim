@@ -55,9 +55,9 @@ keymap("n", "<C-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- open left explorer
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
-keymap("n", "<leader>r", ":diffget 1<CR>", opts) -- take left diff
-keymap("n", "<leader>g", ":diffget 2<CR>", opts) -- take center diff
-keymap("n", "<leader>u", ":diffget 3<CR>", opts) -- take right diff
+keymap("n", "<leader>r<leader>", ":diffget 1<CR>", opts) -- take left diff
+keymap("n", "<leader>g<leader>", ":diffget 2<CR>", opts) -- take center diff
+keymap("n", "<leader>u<leader>", ":diffget 3<CR>", opts) -- take right diff
 
 keymap("n", "J", "mzJ`z", opts) -- append line to end
 
