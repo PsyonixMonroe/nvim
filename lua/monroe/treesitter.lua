@@ -22,3 +22,22 @@ configs.setup {
         max_file_lines = nil,
     }
 }
+
+local status_ok, context = pcall(require, "treesitter-context")
+if not status_ok then
+	print("Could not load treesitter-context")
+    return
+end
+
+context.setup{
+  enable = true,
+  max_lines = 0,
+  min_window_height=0,
+  line_numbers = true,
+  multiline_threshold=10,
+  trim_scope = outer,
+  mode = 'cursor',
+  separator = nil,
+  zindex = 20,
+  on_attach = nil,
+}

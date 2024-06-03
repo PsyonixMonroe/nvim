@@ -47,6 +47,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 -- Treesitter --
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'p00f/nvim-ts-rainbow'
 
 -- Autopairs --
