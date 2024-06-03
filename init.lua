@@ -16,6 +16,7 @@ require "monroe.macros"
 
 -- to update
 -- > PlugUpdate
+-- > MasonUpdate
 -- > Update all lsp
 -- > TSUpdate
 -- fix other issues
