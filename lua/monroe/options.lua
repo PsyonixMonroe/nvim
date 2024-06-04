@@ -57,7 +57,7 @@ vim.cmd([[ autocmd BufEnter *.zig colorscheme gruber-darker ]])
 vim.cmd([[ autocmd BufEnter *.md :setlocal filetype=markdown ]])
 vim.cmd([[ autocmd BufEnter *Jenkinsfile* :setlocal filetype=groovy ]])
 vim.cmd([[ autocmd BufEnter *.lua :setlocal filetype=lua ]])
-vim.cmd([[ autocmd BufWritePre *.tf :TerraformFmt ]])
+-- vim.cmd([[ autocmd BufWritePre *.tf :TerraformFmt ]])
 vim.cmd([[ autocmd BufEnter *
 	\  if !&readonly && !&modifiable && !&buftype == "nofile" && !&buftype == "terminal" && !&buftype == "prompt"
 	\|   :%s/\r//ge
@@ -70,11 +70,11 @@ vim.cmd([[ autocmd BufEnter *
 -- vim.cmd("highlight! CursorLine gui=underline ") -- TODO: this doesn't seem to work
 
 -- Vim-Go Settings --
+vim.g.goimports = 1
 vim.g.goimports_simplify = 1
 vim.g.go_debug_log_output = 'debugger'
 vim.g.go_debug_preserve_layout = 1
 
-vim.g.goimports_simplify = 1
 -- let g:go_debug_windows = {
 --           \ 'vars':       'leftabove 30vnew',
 --           \ 'stack':      'leftabove 20new',

@@ -1,8 +1,8 @@
 require "monroe.plugins"
 require "monroe.keymap"
 require "monroe.options"
-require "monroe.cmp"
 require "monroe.lsp"
+require "monroe.cmp"
 require "monroe.treesitter"
 require "monroe.autopairs"
 require "monroe.gitsigns"
@@ -20,4 +20,3 @@ require "monroe.terraform"
 -- > Update all lsp
 -- > TSUpdate
 -- fix other issues
-

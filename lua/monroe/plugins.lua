@@ -62,7 +62,7 @@ Plug 'moll/vim-bbye'
 Plug 'ldelossa/gh.nvim'
 Plug 'ldelossa/litee.nvim'
 
--- Go Lang Plugins 
+-- Go Lang Plugins
 Plug 'mattn/vim-goimports'
 Plug 'fatih/vim-go'
 
