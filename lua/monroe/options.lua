@@ -57,7 +57,6 @@ vim.cmd([[ autocmd BufEnter *.zig colorscheme gruber-darker ]])
 vim.cmd([[ autocmd BufEnter *.md :setlocal filetype=markdown ]])
 vim.cmd([[ autocmd BufEnter *Jenkinsfile* :setlocal filetype=groovy ]])
 vim.cmd([[ autocmd BufEnter *.lua :setlocal filetype=lua ]])
--- vim.cmd([[ autocmd BufWritePre *.tf :TerraformFmt ]])
 vim.cmd([[ autocmd BufEnter *
 	\  if !&readonly && !&modifiable && !&buftype == "nofile" && !&buftype == "terminal" && !&buftype == "prompt"
 	\|   :%s/\r//ge

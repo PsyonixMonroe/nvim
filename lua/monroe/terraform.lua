@@ -1,6 +1,0 @@
--- local status_ok, terraform = pcall(require, "vim-terraform")
--- if not status_ok then
--- 	print("Could not load vim-terraform")
--- 	require("vim-terraform")
--- 	return
--- end

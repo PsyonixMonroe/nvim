@@ -41,7 +41,7 @@ lspconfig.helm_ls.setup {
 }
 
 allservers = { 'gopls', 'bashls', 'jsonls', 'clangd', 'docker_compose_language_service', 'dockerls',
-	'intelephense', 'psalm', 'pylsp', 'terraformls' }
+	'intelephense', 'psalm', 'pylsp', 'terraformls', 'lua_ls' }
 for key, value in pairs(allservers) do
 	-- print("key: " .. key .. " Value: " .. value)
 	lspconfig[value].setup {
