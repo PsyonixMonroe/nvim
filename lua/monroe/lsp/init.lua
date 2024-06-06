@@ -44,9 +44,18 @@ allservers = { 'gopls', 'bashls', 'jsonls', 'clangd', 'docker_compose_language_s
 	'intelephense', 'psalm', 'pylsp', 'terraformls', 'lua_ls' }
 for key, value in pairs(allservers) do
 	-- print("key: " .. key .. " Value: " .. value)
-	lspconfig[value].setup {
-		capabilities = capabilities
-	}
+	if value == 'gopls' then
+		lspconfig[value].setup {
+			capabilities = capabilities,
+			settings = {
+				templateExtensions = { "gohtml" }
+			}
+		}
+	else
+		lspconfig[value].setup {
+			capabilities = capabilities
+		}
+	end
 end
 
 local function setup()
