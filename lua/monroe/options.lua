@@ -1,5 +1,6 @@
 vim.opt.syntax = "on"                                          -- turn on syntax highlighting
-vim.opt.filetype = "on"                                        -- make sure we are looking at file types for syntax highlighting
+vim.opt.filetype =
+"on"                                                           -- make sure we are looking at file types for syntax highlighting
 vim.opt.backspace = "indent,eol,start"                         -- set backspacing behavior
 
 vim.opt.backup = false                                         -- creates a backup file
@@ -66,6 +67,12 @@ vim.cmd([[ autocmd BufEnter *
 	\  if !&readonly && !&modifiable && !&buftype == "nofile" && !&buftype == "terminal" && !&buftype == "prompt"
 	\|   :%s/\r//ge
 	\| endif ]])
+
+vim.filetype.add({
+	extension = {
+		gohtml = 'html'
+	}
+})
 
 -- Open buffers as tabs
 -- vim.cmd(":au BuffAdd,BufNewFile,BufRead * nested tab sball")
